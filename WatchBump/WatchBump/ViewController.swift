@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         var cell:WBSettingCell = tableView.dequeueReusableCellWithIdentifier("Setting") as WBSettingCell
         cell.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         //cell.textLabel?.text = "somehting"
-
+        
         return cell
     }
 }

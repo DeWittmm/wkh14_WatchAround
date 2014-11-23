@@ -24,6 +24,9 @@
 		0ACB49DA1A226FF6002BBAD4 /* WatchBump WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0ACB49BB1A226FF6002BBAD4 /* WatchBump WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0ACB49E51A227BE2002BBAD4 /* InterestTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49E41A227BE2002BBAD4 /* InterestTableRowController.swift */; };
 		5ADE30401A2281E4009B896F /* WBSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE303F1A2281E4009B896F /* WBSettingCell.swift */; };
+		0ACB49E81A22810A002BBAD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */; };
+		0ACB49EA1A228DCC002BBAD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49E91A228DCC002BBAD4 /* User.swift */; };
+		0ACB49EC1A229138002BBAD4 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB49EB1A229138002BBAD4 /* Users.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		0ACB49D61A226FF6002BBAD4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0ACB49E41A227BE2002BBAD4 /* InterestTableRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestTableRowController.swift; sourceTree = "<group>"; };
 		5ADE303F1A2281E4009B896F /* WBSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBSettingCell.swift; sourceTree = "<group>"; };
+		0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0ACB49E91A228DCC002BBAD4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0ACB49EB1A229138002BBAD4 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +196,7 @@
 		0ACB49BF1A226FF6002BBAD4 /* WatchBump WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				0ACB49C31A226FF6002BBAD4 /* InterfaceController.swift */,
-				0ACB49E41A227BE2002BBAD4 /* InterestTableRowController.swift */,
+				0ACB49E61A2280D9002BBAD4 /* Main */,
 				0ACB49C51A226FF6002BBAD4 /* NotificationController.swift */,
 				0ACB49C71A226FF6002BBAD4 /* GlanceController.swift */,
 				0ACB49C91A226FF6002BBAD4 /* Images.xcassets */,
@@ -205,6 +210,7 @@
 			children = (
 				0ACB49C11A226FF6002BBAD4 /* Info.plist */,
 				0ACB49C21A226FF6002BBAD4 /* PushNotificationPayload.json */,
+				0ACB49EB1A229138002BBAD4 /* Users.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -225,6 +231,17 @@
 				0ACB49D31A226FF6002BBAD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0ACB49E61A2280D9002BBAD4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB49C31A226FF6002BBAD4 /* InterfaceController.swift */,
+				0ACB49E41A227BE2002BBAD4 /* InterestTableRowController.swift */,
+				0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */,
+				0ACB49E91A228DCC002BBAD4 /* User.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACB49CA1A226FF6002BBAD4 /* Images.xcassets in Resources */,
+				0ACB49EC1A229138002BBAD4 /* Users.plist in Resources */,
 				0ACB49CE1A226FF6002BBAD4 /* WatchBump Watch App.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +426,8 @@
 			files = (
 				0ACB49C61A226FF6002BBAD4 /* NotificationController.swift in Sources */,
 				0ACB49C41A226FF6002BBAD4 /* InterfaceController.swift in Sources */,
+				0ACB49EA1A228DCC002BBAD4 /* User.swift in Sources */,
+				0ACB49E81A22810A002BBAD4 /* ProfileViewController.swift in Sources */,
 				0ACB49E51A227BE2002BBAD4 /* InterestTableRowController.swift in Sources */,
 				0ACB49C81A226FF6002BBAD4 /* GlanceController.swift in Sources */,
 			);
