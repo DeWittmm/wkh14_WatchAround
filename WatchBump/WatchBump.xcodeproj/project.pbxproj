@@ -26,6 +26,7 @@
 		0ACB49E81A22810A002BBAD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */; };
 		0ACB49EA1A228DCC002BBAD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49E91A228DCC002BBAD4 /* User.swift */; };
 		0ACB49EC1A229138002BBAD4 /* Users.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB49EB1A229138002BBAD4 /* Users.plist */; };
+		0ACB49EE1A229955002BBAD4 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49ED1A229955002BBAD4 /* UserParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0ACB49E91A228DCC002BBAD4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0ACB49EB1A229138002BBAD4 /* Users.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Users.plist; sourceTree = "<group>"; };
+		0ACB49ED1A229955002BBAD4 /* UserParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0EEA2C1A22A588001A79B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0ACB49E91A228DCC002BBAD4 /* User.swift */,
+				0ACB49ED1A229955002BBAD4 /* UserParser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0ACB49891A226EAA002BBAD4 = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +247,7 @@
 				0ACB49C31A226FF6002BBAD4 /* InterfaceController.swift */,
 				0ACB49E41A227BE2002BBAD4 /* InterestTableRowController.swift */,
 				0ACB49E71A22810A002BBAD4 /* ProfileViewController.swift */,
-				0ACB49E91A228DCC002BBAD4 /* User.swift */,
+				0A0EEA2C1A22A588001A79B8 /* Model */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -424,6 +435,7 @@
 				0ACB49C41A226FF6002BBAD4 /* InterfaceController.swift in Sources */,
 				0ACB49EA1A228DCC002BBAD4 /* User.swift in Sources */,
 				0ACB49E81A22810A002BBAD4 /* ProfileViewController.swift in Sources */,
+				0ACB49EE1A229955002BBAD4 /* UserParser.swift in Sources */,
 				0ACB49E51A227BE2002BBAD4 /* InterestTableRowController.swift in Sources */,
 				0ACB49C81A226FF6002BBAD4 /* GlanceController.swift in Sources */,
 			);
@@ -677,6 +689,7 @@
 				0ACB49B31A226EAA002BBAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB49B41A226EAA002BBAD4 /* Build configuration list for PBXNativeTarget "WatchBumpTests" */ = {
 			isa = XCConfigurationList;
@@ -685,6 +698,7 @@
 				0ACB49B61A226EAA002BBAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB49DB1A226FF6002BBAD4 /* Build configuration list for PBXNativeTarget "WatchBump Watch App" */ = {
 			isa = XCConfigurationList;
@@ -693,6 +707,7 @@
 				0ACB49DD1A226FF6002BBAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0ACB49DE1A226FF6002BBAD4 /* Build configuration list for PBXNativeTarget "WatchBump WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -701,6 +716,7 @@
 				0ACB49E01A226FF6002BBAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
