@@ -9,15 +9,17 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet weak var interfaceTable: WKInterfaceTable!
+    
+    let categories = ["Interests", "Work History", "..."];
 
     override init(context: AnyObject?) {
         // Initialize variables here.
         super.init(context: context)
         
-        // Configure interface objects here.
-        NSLog("%@ init", self)
+        self.loadTableData()
     }
 
     override func willActivate() {
@@ -30,6 +32,17 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         NSLog("%@ did deactivate", self)
         super.didDeactivate()
+    }
+    
+    func loadTableData() {
+        self.interfaceTable.setNumberOfRows(self.categories.count, withRowType: "default");
+        
+        for (index, value) in enumerate(self.categories) {
+            if let row = self.interfaceTable.rowControllerAtIndex(index) as? InterestTableRowController {
+                
+                row.label.setText(value)
+            }
+        }
     }
 
 }

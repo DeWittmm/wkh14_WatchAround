@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14C68m" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fCj-WH-g7e">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
@@ -8,16 +8,60 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <group width="1" height="86" alignment="left" hasDetent="YES" id="qnd-nV-qL0">
+                            <items>
+                                <imageView width="136" height="91" alignment="left" id="rbf-br-1kk"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" hasDetent="YES" id="8pE-EK-bhJ">
+                            <items>
+                                <label width="136" height="40.5" alignment="left" text="Info" id="VHL-RK-dBb"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="235" y="347"/>
+            <point key="canvasLocation" x="488" y="327"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Nad-0c-ENg">
+            <objects>
+                <controller id="fCj-WH-g7e" customClass="InterfaceController" customModule="WatchBump_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" layout="vertical" id="tFE-EZ-lmC">
+                            <items>
+                                <tableRow id="C7h-wJ-xgl" customClass="InterestTableRowController" customModule="WatchBump_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="bYW-yi-lZI">
+                                        <items>
+                                            <label width="136" height="41.5" alignment="left" text="Label" textAlignment="center" id="BiN-vu-pmA"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="label" destination="BiN-vu-pmA" id="xl4-8M-nMw"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceTable" destination="tFE-EZ-lmC" id="rRq-bS-anS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="223" y="327"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="WatchBump_Watch_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="t8f-Gd-c4y">
+                            <items>
+                                <label alignment="left" text="# people" id="Gsl-tD-A8R"/>
+                            </items>
+                        </group>
                         <group alignment="left" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
@@ -44,7 +88,7 @@
         <!--Notification Controller-->
         <scene sceneID="KIl-fV-djm">
             <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="WatchBump_Watch_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="553" y="1001"/>
         </scene>
