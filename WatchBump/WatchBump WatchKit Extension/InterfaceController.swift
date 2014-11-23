@@ -22,6 +22,8 @@ class InterfaceController: WKInterfaceController {
         // Initialize variables here.
         super.init(context: context)
         
+        let data = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Users", ofType: "plist")!)
+        
         self.loadTableData()
     }
 
@@ -55,15 +57,21 @@ class InterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         
         let catg = self.categories[rowIndex]
+        let image = UIImage(named: "ProfilePicture")
+
+        let userInfo = User(name: "Test", type: catg, company: "Hackathon", picture: image!)
         
-        let userInfo = [categoryKey : catg]
+        [categoryKey : catg]
         
         var controllers: [String] = []
+        var users: [User] = []
+        
         for _ in self.categories {
             controllers += ["ProfileViewController"]
+            users += [userInfo]
         }
         
-        self.presentControllerWithNames(controllers, contexts: [userInfo])
+        self.presentControllerWithNames(controllers, contexts: users)
     }
 
 }

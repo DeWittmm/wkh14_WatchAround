@@ -12,19 +12,24 @@ import WatchKit
 class ProfileViewController: WKInterfaceController {
    
     @IBOutlet weak var imageView: WKInterfaceImage!
+    
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
     @IBOutlet weak var infoLabel: WKInterfaceLabel!
     
+    let user: User?
+    
     override init(context: AnyObject?) {
+       
+        user = context as? User
+        println("Loaded ProfileVC for \(user)")
+        
         super.init(context: context)
-        
-        if let context = context as? [String: String] {
-            println("Loaded ProfileVC for \(context[categoryKey])")
-        }
-        
-        imageView.setImage(UIImage(contentsOfFile: "ProfilePicture"))
     }
     
     override func willActivate() {
-        
+        nameLabel.setText(user?.name)
+        infoLabel.setText(user?.type)
+
+        imageView.setImage(user?.picture)
     }
 }

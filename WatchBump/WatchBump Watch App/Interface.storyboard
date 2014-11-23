@@ -12,18 +12,20 @@
                     <items>
                         <group width="1" height="86" alignment="left" hasDetent="YES" id="qnd-nV-qL0">
                             <items>
-                                <imageView width="136" height="91" alignment="left" id="rbf-br-1kk"/>
+                                <imageView width="136" height="91" alignment="left" contentMode="scaleAspectFit" id="rbf-br-1kk"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" hasDetent="YES" id="8pE-EK-bhJ">
                             <items>
-                                <label width="136" height="40.5" alignment="left" text="Info" id="VHL-RK-dBb"/>
+                                <label width="136" height="40.5" alignment="left" text="Info" id="eOe-Gd-Y9c"/>
                             </items>
                         </group>
+                        <label width="136" height="40.5" alignment="left" text="Info" id="VHL-RK-dBb"/>
                     </items>
                     <connections>
                         <outlet property="imageView" destination="rbf-br-1kk" id="Zet-vd-Evi"/>
                         <outlet property="infoLabel" destination="VHL-RK-dBb" id="Reu-2F-dTo"/>
+                        <outlet property="nameLabel" destination="eOe-Gd-Y9c" id="BWe-ST-Ra9"/>
                     </connections>
                 </controller>
             </objects>
