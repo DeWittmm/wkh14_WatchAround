@@ -9,11 +9,14 @@
 import WatchKit
 import Foundation
 
+let categoryKey = "selectedCategory"
+
 class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
     
-    let categories = ["Interests", "Work History", "..."];
+    let categories = ["Company", "Skills", "Friends", "Interests", "Groups", "Places"];
+    let count = [0, 5, 20, 1, 4, 0]
 
     override init(context: AnyObject?) {
         // Initialize variables here.
@@ -34,15 +37,33 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    //MARK: TableView DataSource
+    
     func loadTableData() {
         self.interfaceTable.setNumberOfRows(self.categories.count, withRowType: "default");
         
         for (index, value) in enumerate(self.categories) {
             if let row = self.interfaceTable.rowControllerAtIndex(index) as? InterestTableRowController {
                 
+                let count = self.count[index]
                 row.label.setText(value)
+                row.countLabel.setText("\(count)")
             }
         }
+    }
+    
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        
+        let catg = self.categories[rowIndex]
+        
+        let userInfo = [categoryKey : catg]
+        
+        var controllers: [String] = []
+        for _ in self.categories {
+            controllers += ["ProfileViewController"]
+        }
+        
+        self.presentControllerWithNames(controllers, contexts: [userInfo])
     }
 
 }

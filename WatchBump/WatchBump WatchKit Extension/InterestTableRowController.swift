@@ -12,5 +12,6 @@ import WatchKit
 class InterestTableRowController: NSObject {
  
     @IBOutlet weak var label: WKInterfaceLabel!
+    @IBOutlet weak var countLabel: WKInterfaceLabel!
     
 }

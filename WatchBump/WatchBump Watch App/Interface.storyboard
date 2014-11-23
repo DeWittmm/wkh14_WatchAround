@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--ProfileViewController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc">
+                <controller identifier="ProfileViewController" id="AgC-eL-Hgc" customClass="ProfileViewController" customModule="WatchBump_WatchKit_Extension">
                     <items>
                         <group width="1" height="86" alignment="left" hasDetent="YES" id="qnd-nV-qL0">
                             <items>
@@ -21,9 +21,13 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="imageView" destination="rbf-br-1kk" id="Zet-vd-Evi"/>
+                        <outlet property="infoLabel" destination="VHL-RK-dBb" id="Reu-2F-dTo"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="488" y="327"/>
+            <point key="canvasLocation" x="455" y="327"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="Nad-0c-ENg">
@@ -35,10 +39,13 @@
                                 <tableRow id="C7h-wJ-xgl" customClass="InterestTableRowController" customModule="WatchBump_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="bYW-yi-lZI">
                                         <items>
-                                            <label width="136" height="41.5" alignment="left" text="Label" textAlignment="center" id="BiN-vu-pmA"/>
+                                            <label width="94" height="41.5" alignment="left" text="Label" textAlignment="center" id="BiN-vu-pmA"/>
+                                            <separator alignment="left" id="fRF-Eq-tjE"/>
+                                            <label width="33" height="39.5" alignment="left" text="#" textAlignment="center" id="Ifo-5Z-2Go"/>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="countLabel" destination="Ifo-5Z-2Go" id="4YK-1b-VTm"/>
                                         <outlet property="label" destination="BiN-vu-pmA" id="xl4-8M-nMw"/>
                                     </connections>
                                 </tableRow>
