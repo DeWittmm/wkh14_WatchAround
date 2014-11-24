@@ -11,12 +11,14 @@
       "size" : "18x18",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "logo-black-on-white-172.png",
       "role" : "notificationCenter",
       "subtype" : "42mm"
     },
     {
       "size" : "29x29",
       "idiom" : "watch",
+      "filename" : "logo-black-on-white-172-1.png",
       "role" : "companionSettings",
       "scale" : "2x"
     },
@@ -37,6 +39,7 @@
       "size" : "44x44",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "logo-black-on-white-172-2.png",
       "role" : "appLauncher",
       "subtype" : "42mm"
     },
@@ -44,6 +47,7 @@
       "size" : "86x86",
       "idiom" : "watch",
       "scale" : "2x",
+      "filename" : "logo-black-on-white-172-3.png",
       "role" : "quickLook",
       "subtype" : "38mm"
     },
