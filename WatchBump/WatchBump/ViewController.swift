@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreMotion
 
 class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
+    
+    let motionManager = CMMotionManager()
     
     override init() {
         super.init()
@@ -27,6 +30,22 @@ class ViewController: UIViewController, UITableViewDataSource {
         table.rowHeight = 44;
         table.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let motionHandler =  {
+//            (motion:CMDeviceMotion!, error:NSError!) in
+//            
+//            motion.userAcceleration
+//        }
+//
+//        
+//        motionManager.deviceMotionUpdateInterval = 0.01
+//        motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: motionHandler)
+//        
+//        println(motionManager.deviceMotionActive)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,5 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    //MARK: CoreMotion
 }
 

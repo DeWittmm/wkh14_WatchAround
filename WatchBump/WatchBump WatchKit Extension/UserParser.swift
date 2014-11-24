@@ -10,24 +10,31 @@ import UIKit
 
 class UserParser: NSObject {
     
-    var categories = ["Investor", "Designer", "Places", "Interests", "Groups"]
+    var categories = ["Investor", "Designer", "Place", "Interest", "Group"]
     var count = [3, 3, 0, 0, 0, 0]
     var users: [User] = []
     
     override init() {
         
-        let data = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Users", ofType: "plist")!)
+        let sharedDefaults = NSUserDefaults(suiteName: "group.com.capitalone.Watch1")
         
+        // Register for notification of changes in defaults
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//        selector:@selector(defaultsChanged:)
+//        name:NSUserDefaultsDidChangeNotification
+//        object:self.sharedDefaults];
+        
+        let data = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Users", ofType: "plist")!)
         let userData = data?.firstObject as [[String: AnyObject]]
         
         for dict: [String: AnyObject] in userData {
-            let firstName = dict["firstName"] as? String ?? ""
-            let lastName = dict["lastName"] as? String ?? ""
+            let firstName = asString(dict["firstName"])
+            let lastName = asString(dict["lastName"])
             
             let name = "\(firstName) \(lastName)"
-            let indus = dict["industry"] as? String ?? ""
-            let location = dict["location"] as? String ?? ""
-            let compy = dict["company"] as? String ?? ""
+            let indus = asString(dict["industry"])
+            let location = asString(dict["location"])
+            let compy = asString(dict["company"])
             
             let picture = UIImage(named: name)
             let user = User(name: name, type: indus, company: compy, picture: picture, place: location)
@@ -42,4 +49,8 @@ class UserParser: NSObject {
             count[index] = filteredUsers.count
         }
     }
+}
+
+func asString(msg:AnyObject?) -> String {
+    return msg as? String ?? ""
 }
