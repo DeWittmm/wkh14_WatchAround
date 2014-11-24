@@ -12,7 +12,7 @@ class User: NSObject {
  
     let name: String
     let type: String
-    let company: String
+    var company: String?
     let picture: UIImage?
     let place: String
     

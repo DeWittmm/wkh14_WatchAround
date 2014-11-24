@@ -28,7 +28,12 @@ class ProfileViewController: WKInterfaceController {
     
     override func willActivate() {
         nameLabel.setText(user?.name)
-        infoLabel.setText(user?.company)
+        if let comp = user?.company {
+            infoLabel.setText(comp)
+        }
+        else {
+            infoLabel.setText(user?.place)
+        }
 
         imageView.setImage(user?.picture)
     }

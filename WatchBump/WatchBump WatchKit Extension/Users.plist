@@ -15,7 +15,7 @@
 			<key>pictureUrl</key>
 			<string>https://media.licdn.com/mpr/mprx/0_1C0R3cOjI4PONWcUlXak3Nghdj8gq7cUAhIk3Nah94NuIIhRxkfc7qsaFPh_Be9B-TjLa1KwLNxa</string>
 			<key>location</key>
-			<string>Nasa Ames Research</string>
+			<string>Nasa Ames</string>
 			<key>company</key>
 			<string>Subtraction</string>
 		</dict>
@@ -31,7 +31,7 @@
 			<key>pictureUrl</key>
 			<string>https://media.licdn.com/mpr/mprx/0_H1YHLaLykHZd1ugNENpRLSzKk7jelupNE-EBLSF8UEdZmHIqkzmXwDPmE3gB-wjZdry9ooM_1Xck</string>
 			<key>location</key>
-			<string>NASA Ames Research</string>
+			<string>NASA Ames</string>
 			<key>company</key>
 			<string>Bessemer</string>
 		</dict>

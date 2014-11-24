@@ -26,6 +26,7 @@ class UserParser: NSObject {
         
         let data = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Users", ofType: "plist")!)
         let userData = data?.firstObject as [[String: AnyObject]]
+        var catgs: [String] = []
         
         for dict: [String: AnyObject] in userData {
             let firstName = asString(dict["firstName"])
@@ -48,6 +49,8 @@ class UserParser: NSObject {
             }
             count[index] = filteredUsers.count
         }
+        
+        count[2] = 1;
     }
 }
 

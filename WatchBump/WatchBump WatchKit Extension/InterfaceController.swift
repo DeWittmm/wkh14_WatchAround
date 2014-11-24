@@ -63,8 +63,14 @@ class InterfaceController: WKInterfaceController {
         var controllers: [String] = []
         var users: [User] = []
         
-        let catgUsers = parser.users.filter {
+        var catgUsers = parser.users.filter {
             $0.type == catg
+        }
+        
+        if (catg == "Place") {
+            let user: User? = parser.users.first
+            user?.company = nil;
+            catgUsers = [user!]
         }
         
         for _ in catgUsers {
