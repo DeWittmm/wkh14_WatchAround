@@ -15,14 +15,13 @@ class InterfaceController: WKInterfaceController {
     
     @IBOutlet weak var interfaceTable: WKInterfaceTable!
     
-    let categories = ["Company", "Skills", "Friends", "Interests", "Groups", "Places"];
-    let count = [0, 5, 20, 1, 4, 0]
-
+    let parser: UserParser
+ 
     override init(context: AnyObject?) {
         // Initialize variables here.
-        super.init(context: context)
         
-        let data = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Users", ofType: "plist")!)
+        parser = UserParser()
+        super.init(context: context)
         
         self.loadTableData()
     }
@@ -42,12 +41,12 @@ class InterfaceController: WKInterfaceController {
     //MARK: TableView DataSource
     
     func loadTableData() {
-        self.interfaceTable.setNumberOfRows(self.categories.count, withRowType: "default");
+        self.interfaceTable.setNumberOfRows(parser.categories.count, withRowType: "default");
         
-        for (index, value) in enumerate(self.categories) {
+        for (index, value) in enumerate(parser.categories) {
             if let row = self.interfaceTable.rowControllerAtIndex(index) as? InterestTableRowController {
                 
-                let count = self.count[index]
+                let count = parser.count[index]
                 row.label.setText(value)
                 row.countLabel.setText("\(count)")
             }
@@ -56,22 +55,23 @@ class InterfaceController: WKInterfaceController {
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         
-        let catg = self.categories[rowIndex]
+        let catg = parser.categories[rowIndex]
         let image = UIImage(named: "ProfilePicture")
 
-        let userInfo = User(name: "Test", type: catg, company: "Hackathon", picture: image!)
-        
         [categoryKey : catg]
         
         var controllers: [String] = []
         var users: [User] = []
         
-        for _ in self.categories {
-            controllers += ["ProfileViewController"]
-            users += [userInfo]
+        let catgUsers = parser.users.filter {
+            $0.type == catg
         }
         
-        self.presentControllerWithNames(controllers, contexts: users)
+        for _ in catgUsers {
+            controllers += ["ProfileViewController"]
+        }
+        
+        self.presentControllerWithNames(controllers, contexts: catgUsers)
     }
 
 }

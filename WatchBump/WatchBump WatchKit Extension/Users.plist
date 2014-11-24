@@ -1,17 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>User1</key>
-	<dict>
-		<key>name</key>
-		<string></string>
-		<key>type</key>
-		<string></string>
-		<key>company</key>
-		<string></string>
-		<key>pictureName</key>
-		<string></string>
-	</dict>
-</dict>
+<array>
+	<array>
+		<dict>
+			<key>firstName</key>
+			<string>Paul</string>
+			<key>headline</key>
+			<string>Partner at Subtraction Capital</string>
+			<key>industry</key>
+			<string>Investor</string>
+			<key>lastName</key>
+			<string>Willard</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_1C0R3cOjI4PONWcUlXak3Nghdj8gq7cUAhIk3Nah94NuIIhRxkfc7qsaFPh_Be9B-TjLa1KwLNxa</string>
+			<key>location</key>
+			<string>Nasa Ames Research</string>
+			<key>company</key>
+			<string>Subtraction</string>
+		</dict>
+		<dict>
+			<key>firstName</key>
+			<string>Ethan</string>
+			<key>headline</key>
+			<string>Partner at Bessemer Venture Partners</string>
+			<key>industry</key>
+			<string>Investor</string>
+			<key>lastName</key>
+			<string>Kurzweil</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_H1YHLaLykHZd1ugNENpRLSzKk7jelupNE-EBLSF8UEdZmHIqkzmXwDPmE3gB-wjZdry9ooM_1Xck</string>
+			<key>location</key>
+			<string>NASA Ames Research</string>
+			<key>company</key>
+			<string>Bessemer</string>
+		</dict>
+		<dict>
+			<key>firstName</key>
+			<string>Ty</string>
+			<key>headline</key>
+			<string>Angel Investor</string>
+			<key>industry</key>
+			<string>Investor</string>
+			<key>lastName</key>
+			<string>Danco</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_fsPnUVBzhLK9TOZ27R3dUMnR2FL6TOe2S4bdUZz61GA9Ysxu_y_sz4THGW5JGJWhaMleN0FrCeug</string>
+			<key>location</key>
+			<string>Computer History Museum</string>
+			<key>company</key>
+			<string>Angel Investments</string>
+		</dict>
+		<dict>
+			<key>firstName</key>
+			<string>Jose</string>
+			<key>headline</key>
+			<string>Co-founder and Co-director at Boomtown Accelerator</string>
+			<key>industry</key>
+			<string>Designer</string>
+			<key>lastName</key>
+			<string>Vieitez</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_2weeFyH5kwnkIEuBmmMBF0HWkDrQWEjBmdycF0VJUHXBnaoc8SZkWxmcE_KZoSpUDeEnHZXDDKg8</string>
+			<key>location</key>
+			<string>Computer History Museum</string>
+			<key>company</key>
+			<string>Vieitez Designs</string>
+		</dict>
+		<dict>
+			<key>firstName</key>
+			<string>Lina</string>
+			<key>headline</key>
+			<string>Entrepreneur/Artist/Designer</string>
+			<key>industry</key>
+			<string>Designer</string>
+			<key>lastName</key>
+			<string>Egutkina</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_OVJognz55-8Cu7C2YgWvgqAd5tLG2712yRDvgqnvsBA-1IXutpd61NGUwp5j7e-h0JRqtPkO8sb_</string>
+			<key>location</key>
+			<string>Computer History Museum</string>
+			<key>company</key>
+			<string>Boomtown</string>
+		</dict>
+		<dict>
+			<key>firstName</key>
+			<string>Peiman</string>
+			<key>headline</key>
+			<string>Design</string>
+			<key>industry</key>
+			<string>Designer</string>
+			<key>lastName</key>
+			<string>Amini</string>
+			<key>pictureUrl</key>
+			<string>https://media.licdn.com/mpr/mprx/0_527SxWfvs-0VQTrfFduYxIDvnreU6XrfFmU-xIuWWnywJ8F7doxTAw4bZjHk5iAikfSPKuOB1vQQ</string>
+			<key>company</key>
+			<string>Amini Designs</string>
+		</dict>
+	</array>
+</array>
 </plist>

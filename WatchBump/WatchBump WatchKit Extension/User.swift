@@ -13,12 +13,14 @@ class User: NSObject {
     let name: String
     let type: String
     let company: String
-    let picture: UIImage
+    let picture: UIImage?
+    let place: String
     
-    init(name: String, type: String, company: String, picture: UIImage) {
+    init(name: String, type: String, company: String, picture: UIImage?, place: String) {
         self.name = name;
         self.type = type
         self.company = company
         self.picture = picture
+        self.place = place
     }
 }
