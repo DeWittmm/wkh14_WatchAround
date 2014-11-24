@@ -8,19 +8,34 @@
 
 import UIKit
 
-class User: NSObject {
+class User {
  
     let name: String
-    let type: String
+    let type: String?
     var company: String?
     let picture: UIImage?
-    let place: String
+    let place: String?
     
-    init(name: String, type: String, company: String, picture: UIImage?, place: String) {
+    init(name: String, type: String?, company: String?, picture: UIImage?, place: String?) {
         self.name = name;
         self.type = type
         self.company = company
         self.picture = picture
         self.place = place
+    }
+    
+    func attributeBasedOnCategory(catg: String) -> String? {
+        switch catg {
+        case "Investors":
+            return company
+        case "Designers":
+            return company
+        case "Places":
+            return place
+        case "Groups":
+            return ""
+        default:
+        return""
+        }
     }
 }

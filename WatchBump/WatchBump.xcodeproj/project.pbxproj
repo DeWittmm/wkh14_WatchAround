@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A0EEA2E1A22AA1A001A79B8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0EEA2D1A22AA1A001A79B8 /* CoreMotion.framework */; };
 		0A0EEA321A22B226001A79B8 /* WatchBump.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 0A0EEA311A22B226001A79B8 /* WatchBump.entitlements */; };
+		0A0EEA351A23AAF0001A79B8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0EEA341A23AAF0001A79B8 /* SwiftyJSON.swift */; };
+		0A0EEA361A23AB1D001A79B8 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0EEA341A23AAF0001A79B8 /* SwiftyJSON.swift */; };
 		0ACB49981A226EAA002BBAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49971A226EAA002BBAD4 /* AppDelegate.swift */; };
 		0ACB499A1A226EAA002BBAD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB49991A226EAA002BBAD4 /* ViewController.swift */; };
 		0ACB499D1A226EAA002BBAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ACB499B1A226EAA002BBAD4 /* Main.storyboard */; };
@@ -73,6 +75,7 @@
 /* Begin PBXFileReference section */
 		0A0EEA2D1A22AA1A001A79B8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		0A0EEA311A22B226001A79B8 /* WatchBump.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WatchBump.entitlements; sourceTree = "<group>"; };
+		0A0EEA341A23AAF0001A79B8 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = SOURCE_ROOT; };
 		0ACB49921A226EAA002BBAD4 /* WatchBump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchBump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ACB49961A226EAA002BBAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACB49971A226EAA002BBAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -165,13 +168,10 @@
 		0ACB49941A226EAA002BBAD4 /* WatchBump */ = {
 			isa = PBXGroup;
 			children = (
-				0A0EEA311A22B226001A79B8 /* WatchBump.entitlements */,
 				0ACB499B1A226EAA002BBAD4 /* Main.storyboard */,
 				0ACB49971A226EAA002BBAD4 /* AppDelegate.swift */,
 				0ACB49991A226EAA002BBAD4 /* ViewController.swift */,
 				5ADE303F1A2281E4009B896F /* WBSettingCell.swift */,
-				0ACB499E1A226EAA002BBAD4 /* Images.xcassets */,
-				0ACB49A01A226EAA002BBAD4 /* LaunchScreen.xib */,
 				0ACB49951A226EAA002BBAD4 /* Supporting Files */,
 			);
 			path = WatchBump;
@@ -180,6 +180,10 @@
 		0ACB49951A226EAA002BBAD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB49A01A226EAA002BBAD4 /* LaunchScreen.xib */,
+				0ACB499E1A226EAA002BBAD4 /* Images.xcassets */,
+				0A0EEA341A23AAF0001A79B8 /* SwiftyJSON.swift */,
+				0A0EEA311A22B226001A79B8 /* WatchBump.entitlements */,
 				0ACB49961A226EAA002BBAD4 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -217,7 +221,6 @@
 				0ACB49E61A2280D9002BBAD4 /* Main */,
 				0ACB49C51A226FF6002BBAD4 /* NotificationController.swift */,
 				0ACB49C71A226FF6002BBAD4 /* GlanceController.swift */,
-				0ACB49C91A226FF6002BBAD4 /* Images.xcassets */,
 				0ACB49C01A226FF6002BBAD4 /* Supporting Files */,
 			);
 			path = "WatchBump WatchKit Extension";
@@ -226,6 +229,7 @@
 		0ACB49C01A226FF6002BBAD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0ACB49C91A226FF6002BBAD4 /* Images.xcassets */,
 				0ACB49C11A226FF6002BBAD4 /* Info.plist */,
 				0ACB49C21A226FF6002BBAD4 /* PushNotificationPayload.json */,
 				0ACB49EB1A229138002BBAD4 /* Users.plist */,
@@ -428,6 +432,7 @@
 				0ACB499A1A226EAA002BBAD4 /* ViewController.swift in Sources */,
 				0ACB49981A226EAA002BBAD4 /* AppDelegate.swift in Sources */,
 				5ADE30401A2281E4009B896F /* WBSettingCell.swift in Sources */,
+				0A0EEA351A23AAF0001A79B8 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +451,7 @@
 				0ACB49C61A226FF6002BBAD4 /* NotificationController.swift in Sources */,
 				0ACB49C41A226FF6002BBAD4 /* InterfaceController.swift in Sources */,
 				0ACB49EA1A228DCC002BBAD4 /* User.swift in Sources */,
+				0A0EEA361A23AB1D001A79B8 /* SwiftyJSON.swift in Sources */,
 				0ACB49E81A22810A002BBAD4 /* ProfileViewController.swift in Sources */,
 				0ACB49EE1A229955002BBAD4 /* UserParser.swift in Sources */,
 				0ACB49E51A227BE2002BBAD4 /* InterestTableRowController.swift in Sources */,

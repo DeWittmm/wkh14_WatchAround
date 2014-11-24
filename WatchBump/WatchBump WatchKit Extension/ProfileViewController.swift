@@ -17,24 +17,21 @@ class ProfileViewController: WKInterfaceController {
     @IBOutlet weak var infoLabel: WKInterfaceLabel!
     
     let user: User?
+    let searchCategory: String
     
     override init(context: AnyObject?) {
        
-        user = context as? User
-        println("Loaded ProfileVC for \(user)")
+        let dict = context as? [String: User]
+        
+        searchCategory = dict?.keys.first ?? ""
+        user = dict?.values.first
         
         super.init(context: context)
     }
     
     override func willActivate() {
         nameLabel.setText(user?.name)
-        if let comp = user?.company {
-            infoLabel.setText(comp)
-        }
-        else {
-            infoLabel.setText(user?.place)
-        }
-
+        infoLabel.setText(user?.attributeBasedOnCategory(searchCategory))
         imageView.setImage(user?.picture)
     }
 }

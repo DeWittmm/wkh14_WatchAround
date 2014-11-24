@@ -69,12 +69,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     @IBAction func switched(sender: AnyObject) {
-        /*
-        var sharedDefaults = NSUserDefaults(suiteName: "group.com.capitalone.Watch1");
-        sharedDefaults?.setObject(sender.tag, forKey: "cat")
+
+        var sharedDefaults = NSUserDefaults(suiteName: "group.com.wkh14.WatchBump");
+        sharedDefaults?.setObject(sender.tag, forKey: "CategoriesKey")
         sharedDefaults?.synchronize()
-        */
-        
     }
 }
 

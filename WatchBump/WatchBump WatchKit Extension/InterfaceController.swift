@@ -43,12 +43,12 @@ class InterfaceController: WKInterfaceController {
     func loadTableData() {
         self.interfaceTable.setNumberOfRows(parser.categories.count, withRowType: "default");
         
-        for (index, value) in enumerate(parser.categories) {
+        for (index, key) in enumerate(parser.categories) {
             if let row = self.interfaceTable.rowControllerAtIndex(index) as? InterestTableRowController {
                 
-                let count = parser.count[index]
-                row.label.setText(value)
-                row.countLabel.setText("\(count)")
+                let count = parser.usersByCategory[key]?.count
+                row.countLabel.setText("\(count ?? 0)")
+                row.label.setText(key)
             }
         }
     }
@@ -56,28 +56,19 @@ class InterfaceController: WKInterfaceController {
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         
         let catg = parser.categories[rowIndex]
-        let image = UIImage(named: "ProfilePicture")
-
-        [categoryKey : catg]
         
         var controllers: [String] = []
-        var users: [User] = []
-        
-        var catgUsers = parser.users.filter {
-            $0.type == catg
+        var contexts: [[String: User]] = []
+        if let catgUsers = parser.usersByCategory[catg]{
+            
+            for user in catgUsers {
+                controllers += ["ProfileViewController"]
+                let dict = [catg : user]
+                contexts += [dict]
+            }
+            
+            presentControllerWithNames(controllers, contexts: contexts)
         }
-        
-        if (catg == "Place") {
-            let user: User? = parser.users.first
-            user?.company = nil;
-            catgUsers = [user!]
-        }
-        
-        for _ in catgUsers {
-            controllers += ["ProfileViewController"]
-        }
-        
-        self.presentControllerWithNames(controllers, contexts: catgUsers)
     }
 
 }
