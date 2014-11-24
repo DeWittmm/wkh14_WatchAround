@@ -13,11 +13,11 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
     
-    let motionManager = CMMotionManager()
+    
+    var categories = ["Company", "Skills", "Friends", "Interests", "Groups", "Places"];
     
     override init() {
         super.init()
-        //table.registerClass(WBSettingCell.self, forCellReuseIdentifier: "Setting")
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -54,17 +54,27 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return categories.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:WBSettingCell = tableView.dequeueReusableCellWithIdentifier("Setting") as WBSettingCell
         cell.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        //cell.textLabel?.text = "somehting"
         
+        cell.title.text = categories[indexPath.row]
+        cell.toggle.tag = indexPath.row;
+        
+        cell.imageOfTitle.image = UIImage(named: categories[indexPath.row])
         return cell
     }
     
-    //MARK: CoreMotion
+    @IBAction func switched(sender: AnyObject) {
+        /*
+        var sharedDefaults = NSUserDefaults(suiteName: "group.com.capitalone.Watch1");
+        sharedDefaults?.setObject(sender.tag, forKey: "cat")
+        sharedDefaults?.synchronize()
+        */
+        
+    }
 }
 
